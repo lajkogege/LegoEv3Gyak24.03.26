@@ -9,8 +9,9 @@ import Feladatok
 
 oraifeladat = Feladatok.Feladatok()
 #oraifeladat.scanner()
-#oraifeladat.elsoa()
-oraifeladat.elsoa2()
+# oraifeladat.elsoa()
+#oraifeladat.elsoa2()
+oraifeladat.elsob()
 oraifeladat.csipog()
 
 

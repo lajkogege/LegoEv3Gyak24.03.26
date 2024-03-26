@@ -69,3 +69,19 @@ class Feladatok():
             if fekete and self.cs.reflection()>(69+10)/2-10:
                 vege =True
         self.robot.stop(Stop.BRAKE)
+
+    def hanyvonal(selfdb, seb, hatar):
+        for vonalakSzama in range (db):
+            vege= False
+            fekete= False   
+            self.robot.drive(100,0)
+            while not vege:
+                if self.cs.reflection()< hatar:
+                    fekete=True 
+                if fekete and self.cs.reflection()>hatar+10:
+                    vege =True
+            self.robot.stop(Stop.BRAKE)
+
+    def elsob(self):
+        hatar = (69+10)/2-20
+        hanyvonal(5,100,3500)
