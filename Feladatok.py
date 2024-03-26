@@ -48,3 +48,9 @@ class Feladatok():
             wait(3500/178)
         self.robot.stop(Stop.BRAKE)
         wait(10000)
+    
+    def elsoa():
+        while self.cs.reflection()>(74+10)/2:
+            self.robot.drive(100,0)
+        self.robot.stop(Stop.BRAKE)
+        
