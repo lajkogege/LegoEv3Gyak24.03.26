@@ -42,9 +42,9 @@ class Feladatok():
         self.ido.reset()
         hol = 0
         while self.ido.time()<3000:
-            if self.cs.reflection()<(69+10)/2-10:
+            if self.cs.reflection()<(69+10)/2:
                 self.ev3.scanner.draw_line(hol,0, 127)
             hol +=1
-            wait(3000/178)
+        wait(3000/178)
         self.robot.stop(Stop.BRAKE)
         wait(10000)
