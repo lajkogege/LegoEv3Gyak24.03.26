@@ -8,7 +8,8 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 import Feladatok
 
 oraifeladat = Feladatok.Feladatok()
-oraifeladat.scanner()
+#oraifeladat.scanner()
+oraifeladat.elsoa()
 oraifeladat.csipog()
 
 

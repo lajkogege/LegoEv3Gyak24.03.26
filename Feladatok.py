@@ -49,8 +49,12 @@ class Feladatok():
         self.robot.stop(Stop.BRAKE)
         wait(10000)
     
-    def elsoa():
-        while self.cs.reflection()>(74+10)/2:
+    def elsoa(self):
+        #nem látt feketét addig megy
+        while self.cs.reflection()>(69+10)/2-20:
             self.robot.drive(100,0)
         self.robot.stop(Stop.BRAKE)
-        
+        #addig megy ami feketét lát
+        while self.cs.reflection()<(69+10)/2-10:
+            self.robot.drive(100,0)
+        self.robot.stop(Stop.BRAKE)
