@@ -74,7 +74,7 @@ class Feladatok():
         for vonalakSzama in range (db):
             vege= False
             fekete= False   
-            self.robot.drive(100,0)
+            self.robot.drive(seb,0)
             while not vege:
                 if self.cs.reflection()< hatar:
                     fekete=True 
@@ -89,3 +89,21 @@ class Feladatok():
     def elsoc (self):
         hatar = (69+10)/2-20
         self.hanyvonal(5,-100,hatar)
+        self.robot.stop(Stop.BRAKE)
+
+    def eslod(self):
+        hosz = []
+        self.robot.drive()
+        for vonalakSzama in range(5):
+            vege= False
+            fekete= False   
+            self.robot.drive(100,0)
+            while not vege:
+                if self.cs.reflection()<(69+10)/2-20:
+                    fekete=True 
+                    self.ido.reset()
+                if fekete and self.cs.reflection()>(69+10)/2-10:
+                    vege =True
+                    hosz = self.ido.time()
+                    hosszok.append(hosz)
+            self.robot.stop(Stop.BRAKE)
