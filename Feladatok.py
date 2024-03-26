@@ -91,15 +91,15 @@ class Feladatok():
         self.hanyvonal(5,-100,hatar)
         self.robot.stop(Stop.BRAKE)
 
-    def eslod(self):
-        hosz = []
-        self.robot.drive()
+    def elsod(self):
+        hosszok = []
+        self.robot.drive(100,0)
         for vonalakSzama in range(5):
             vege= False
             fekete= False   
             self.robot.drive(100,0)
             while not vege:
-                if self.cs.reflection()<(69+10)/2-20:
+                if self.cs.reflection()<(69+10)/2-20 and not fekete:
                     fekete=True 
                     self.ido.reset()
                 if fekete and self.cs.reflection()>(69+10)/2-10:
@@ -107,3 +107,21 @@ class Feladatok():
                     hosz = self.ido.time()
                     hosszok.append(hosz)
             self.robot.stop(Stop.BRAKE)
+            print(hosz)
+        print(hosszok)
+
+    def elsoe(self):
+        vege= False
+        fekete= False   
+        self.robot.drive(100,0)
+        hanyadik=0
+        while not vege:
+            if self.cs.reflection()<(69+10)/2-20:
+                fekete=True 
+                for i in range (0,hanyadik,1):
+                    self.ev3.speaker.beep()
+            if fekete and self.cs.reflection()>(69+10)/2-10:
+                vege =True
+                for i in range (0,hanyadik,1):
+                    self.ev3.speaker.beep()
+        self.robot.stop(Stop.BRAKE)

@@ -12,7 +12,9 @@ oraifeladat = Feladatok.Feladatok()
 # oraifeladat.elsoa()
 #oraifeladat.elsoa2()
 #oraifeladat.elsob()
-oraifeladat.elsoc()
+#oraifeladat.elsoc()
+#oraifeladat.elsod()
+oraifeladat.elsoe()
 oraifeladat.csipog()
 
 
