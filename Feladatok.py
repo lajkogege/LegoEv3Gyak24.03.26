@@ -58,3 +58,14 @@ class Feladatok():
         while self.cs.reflection()<(69+10)/2-10:
             self.robot.drive(100,0)
         self.robot.stop(Stop.BRAKE)
+
+    def elsoa2(self):
+        vege= False
+        fekete= False   
+        self.robot.drive(100,0)
+        while not vege:
+            if self.cs.reflection()<(69+10)/2-20:
+                fekete=True 
+            if fekete and self.cs.reflection()>(69+10)/2-10:
+                vege =True
+        self.robot.stop(Stop.BRAKE)
