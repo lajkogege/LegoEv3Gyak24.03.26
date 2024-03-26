@@ -85,3 +85,7 @@ class Feladatok():
     def elsob(self):
         hatar = (69+10)/2-20
         self.hanyvonal(5,100,hatar)
+
+    def elsoc (self):
+        hatar = (69+10)/2-20
+        self.hanyvonal(5,-100,hatar)
