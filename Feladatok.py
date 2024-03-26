@@ -34,3 +34,17 @@ class Feladatok():
 
     def scanner(self):
         #2.	A robotképernyőn szeretném ha megjelenne a függőleges vonalak a mintának megfelelően. (scanner)
+        #szürke 69
+        #fekete 10
+        #asztalról le 0
+        #félig azstalrol 46
+        self.robot.drive(100,0)
+        self.ido.reset()
+        hol = 0
+        while self.ido.time()<3000:
+            if self.cs.reflection()<(69+10)/2-10:
+                self.ev3.scanner.draw_line(hol,0, 127)
+            hol +=1
+            wait(3000/178)
+        self.robot.stop(Stop.BRAKE)
+        wait(10000)
