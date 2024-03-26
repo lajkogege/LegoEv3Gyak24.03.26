@@ -70,7 +70,7 @@ class Feladatok():
                 vege =True
         self.robot.stop(Stop.BRAKE)
 
-    def hanyvonal(selfdb, seb, hatar):
+    def hanyvonal(self, db, seb, hatar):
         for vonalakSzama in range (db):
             vege= False
             fekete= False   
@@ -84,4 +84,4 @@ class Feladatok():
 
     def elsob(self):
         hatar = (69+10)/2-20
-        hanyvonal(5,100,3500)
+        self.hanyvonal(5,100,hatar)
