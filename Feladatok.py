@@ -31,3 +31,6 @@ class Feladatok():
 
     def csipog(self):
         self.ev3.speaker.beep()
+
+    def scanner(self):
+        #2.	A robotképernyőn szeretném ha megjelenne a függőleges vonalak a mintának megfelelően. (scanner)
